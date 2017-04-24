@@ -1,0 +1,31 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "friend compatibility app",
+  "main": "home.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rixgithub/FriendFinder.git"
+  },
+  "keywords": [
+    "friend",
+    "finder",
+    "app",
+    "compatibilty"
+  ],
+  "author": "RLG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rixgithub/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/rixgithub/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "path": "^0.12.7"
+  }
+}
