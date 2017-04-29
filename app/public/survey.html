@@ -35,8 +35,8 @@
 		<h2>Question 1</h2>
 		<h3>Your mind is always buzzing with unexplored ideas and plans.</h3>
 		<div class="form-group">
-			<label for="q1">Select an Option</label>
 			<select class="form-control" id="q1" style="width: 200px">
+	 		<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -48,8 +48,8 @@
 		<h2>Question 2</h2>
 		<h3>Generally speaking, you rely more on your experience than your imagination.</h3>
 		<div class="form-group">
-			<label for="q2">Select an Option</label>
 			<select class="form-control" id="q2" style="width: 200px">
+			<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -61,8 +61,8 @@
 		<h2>Question 3</h2>
 		<h3>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
 		<div class="form-group">
-			<label for="q3">Select an Option</label>
 			<select class="form-control" id="q3" style="width: 200px">
+			<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -74,8 +74,8 @@
 		<h2>Question 4</h2>
 		<h3>You rarely do something just out of sheer curiosity.</h3>
 		<div class="form-group">
-			<label for="q4">Select an Option</label>
 			<select class="form-control" id="q4" style="width: 200px">
+			<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -87,8 +87,8 @@
 		<h2>Question 5</h2>
 		<h3>People can rarely upset you.</h3>
 		<div class="form-group">
-			<label for="q5">Select an Option</label>
 			<select class="form-control" id="q5" style="width: 200px">
+			<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -100,8 +100,8 @@
 		<h2>Question 6</h2>
 		<h3>It is often difficult for you to relate to other people’s feelings.</h3>
 		<div class="form-group">
-			<label for="q6">Select an Option</label>
 			<select class="form-control" id="q6" style="width: 200px">
+			<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -113,8 +113,8 @@
 		<h2>Question 7</h2>
 		<h3>In a discussion, truth should be more important than people’s sensitivities.</h3>
 		<div class="form-group">
-			<label for="q7">Select an Option</label>
 			<select class="form-control" id="q7" style="width: 200px">
+			<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -126,8 +126,8 @@
 		<h2>Question 8</h2>
 		<h3>You rarely get carried away by fantasies and ideas.</h3>
 		<div class="form-group">
-			<label for="q8">Select an Option</label>
 			<select class="form-control" id="q8" style="width: 200px">
+			<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -139,8 +139,8 @@
 		<h2>Question 9</h2>
 		<h3>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
 		<div class="form-group">
-			<label for="q9">Select an Option</label>
 			<select class="form-control" id="q9" style="width: 200px">
+			<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -152,8 +152,8 @@
 		<h2>Question 10</h2>
 		<h3>You feel more energetic after spending time with a group of people.</h3>
 		<div class="form-group">
-			<label for="q10">Select an Option</label>
 			<select class="form-control" id="q10" style="width: 200px">
+			<option value="">Select an Option</option>
 			<option value="1">1 (Strongly Disagree)</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -170,6 +170,26 @@
 	</div>
 	<br>
 	<br>
+	
+	<!-- The Modal window code -->
+	<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h1 class="modal-title">Your New Best Friend</h1>
+	      </div>
+	      <div class="modal-body">
+	      	<h2 id="bestName"><h2>
+	        <img id="bestPhoto"></img>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
 	<footer class="footer">
 		<div class="container">
 			<p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/rixgithub/FriendFinder">GitHub Repo</a></p>
@@ -191,8 +211,7 @@
 					filledOut = false;
 				}
 			});
-
-			$("#q1").each(function() {
+			$(".chosen-select").each(function() {
 				if ( $(this).val() === "") {
 					filledOut = false;
 				}
@@ -212,17 +231,22 @@
 			
 			$.post(currentURL + "/api/friends", newUserInfo, function(data) {
 
+				$("#bestName").text(data.name);
+				$("#bestPhoto").attr({
+					src: data.photo,
+					height: 350,
+					width: 500
+				});
+				$('#myModal').modal();
 			})
-			
+
 		} else {
 			alert("Please fill out every line in the form to continue.");
 		}
 
-		// window.location.reload();
+		
 		$(".form-control").val("");
-		$("#userName").val("");	
-		$("#userPhoto").val("");
-
+		
 	});
 
 
