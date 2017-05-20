@@ -240,13 +240,14 @@
 				$('#myModal').modal();
 			})
 
+			// you should only clear out the form if it can be submitted, otherwise you wanna leave the user's inputs
+			// so they don't have to back and refill out whatever they'd done initially
+			$(".form-control").val("");
+
 		} else {
 			alert("Please fill out every line in the form to continue.");
 		}
 
-		
-		$(".form-control").val("");
-		
 	});
 
 
