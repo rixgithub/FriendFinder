@@ -1,6 +1,7 @@
 // DEPENDEMCIES - NPM packages to download
 var bodyParser = require('body-parser');
-var path = require('path');
+// you aren't actually using the path module in this file so there's no need to require it
+// var path = require('path');
 var express = require('express');
 
 // Sets up our express server

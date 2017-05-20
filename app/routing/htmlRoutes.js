@@ -15,7 +15,8 @@ module.exports = function(app) {
 	});
 
 	// .use is for default when users go to anything but /survey they will be given this HTML file
-	app.use( function(req, res) {
+  // you can also specify the route using a wildcard like so
+	app.use('*', function(req, res) {
 		res.sendFile(path.join(__dirname + '/../public/home.html'));
 	});
 }

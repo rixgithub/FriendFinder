@@ -13,46 +13,41 @@ module.exports = function (app) {
  	});
 
  	app.post('/api/friends', function (req, res) {
- 		friendsData.push(req.body);
- 		// console.log(friendsData[0].scores);
- 		// console.log(req.body.scores);
 
  		newUserData = req.body;
  		newUserScore = newUserData.scores;
- 		// var totalDifference = 0;
 
- 		// console.log(newUserData);
- 		// console.log(newUserScore);
  		var bestFriends = {
  			name: "",
  			photo: "",
  			bestFriendNumber: 100
  		}
 
- 		console.log(newUserScore);
-
  		// loop through the friendsData array except the last one which will be the new user
- 		for (var i = 0; i < friendsData.length - 1; i++) { 			
- 			// console.log(friendsData[i]);
- 			// console.log(friendsData[i].scores);
- 			totalDifference = 0;
+    // since friendsData is an array you can just use the native `.forEach` method here
+    // this creates a functional closure/scope that won't leak variables.
+    friendsData.forEach(function(friend){
+      // you always want to declare variables so they don't leak onto the global scope
+ 			var totalDifference = 0;
 
  			// loop through the 10 scores of each object from first loop 
  			// and subtract the newUserScore with the friends scores and add them together
- 			for (var j = 0; j < 10; j++) {
- 				totalDifference = totalDifference + Math.abs( parseInt(newUserScore[j]) - parseInt(friendsData[i].scores[j]) );
- 				console.log(totalDifference);
+      // you can also use the `.forEach` method here..
+      // the second argument passed to forEach is the index of the current item you're operating on
+      friend.scores.forEach(function(score, i) {
+        totalDifference += Math.abs( parseInt(newUserScore[i]) - parseInt(score) );
 
- 				if (totalDifference <= bestFriends.bestFriendNumber) {
- 					bestFriends.name = friendsData[i].name;
- 					bestFriends.photo = friendsData[i].photo;
- 					bestFriends.bestFriendNumber = totalDifference;
- 				}
+        if (totalDifference <= bestFriends.bestFriendNumber) {
+          bestFriends.name = friend.name;
+          bestFriends.photo = friend.photo;
+          bestFriends.bestFriendNumber = totalDifference;
+        }
 
- 			}
+      })
 
- 		}
- 		console.log(bestFriends);
+ 		})
+    // since I switched this to loop through the array of friends, this push has to happen later. Otherwise, My user will be my best friend
+    friendsData.push(req.body);
  		res.json(bestFriends);
  	});
 
