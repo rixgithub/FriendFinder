@@ -10,18 +10,28 @@ body {
 }
 
 .form-control {
-	background-color: #dd6300;
-	border-color: #dd6300;
+	/*background-color: #dd6300;*/
+/*	border-color: #dd6300;*/
 	color: black;
+}
+
+#userName {
+	width: 205px;
+}
+
+#userPhoto {
+	width: 205px;
 }
 
 h1 {
 	font-family: 'Shadows Into Light', cursive;
 	font-weight: bold;
+	font-size: 60px;
 }
 
 h2 {
 	font-family: 'Shadows Into Light', cursive;
+	font-size: 40px;
 }
 
 .btn {
