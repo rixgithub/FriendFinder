@@ -1,0 +1,55 @@
+html {
+	position: relative; 
+	min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 10px;
+  background-color: teal;
+}
+
+#fingerPic {
+	 width: 100%;
+}
+
+.jumbotron {
+	width: 100%;
+    background-color: #dd6300;
+}
+
+img {
+	border: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: 'Shadows Into Light', cursive;
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+.btn {
+	background-color: gray;
+	border-color: gray;
+}
+
+.jumbotron p {
+	text-align: center;
+}
+
+a {
+	color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 10px;
+}
+

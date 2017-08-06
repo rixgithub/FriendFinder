@@ -1,0 +1,42 @@
+html {
+	position: relative; 
+	min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 10px;
+  background-color: teal;
+}
+
+.form-control {
+	background-color: #dd6300;
+	border-color: #dd6300;
+	color: black;
+}
+
+h1 {
+	font-family: 'Shadows Into Light', cursive;
+	font-weight: bold;
+}
+
+h2 {
+	font-family: 'Shadows Into Light', cursive;
+}
+
+.btn {
+	background-color: gray;
+	border-color: gray;
+}
+
+a {
+	color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 10px;
+}
